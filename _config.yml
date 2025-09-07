@@ -8,13 +8,19 @@ plugins:
   - jekyll-paginate
   - jekyll-gist 
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 # Permalinks
 permalink:        pretty
 
-# Include for folder organization 
+# Page and Project organization
 include:
   - _pages
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:slug/
 
 
 # Setup
