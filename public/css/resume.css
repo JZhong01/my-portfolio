@@ -1,43 +1,35 @@
-
-
-
-
-
-/* PDF wrapper */
+/* Ensure PDF container spans full available width in the content area */
 body.resume-page .pdf-container {
-    width: 100%;            /* full width of content area */
-    max-width: 900px;       /* desktop max width */
-    margin: 1rem auto;      /* center horizontally */
-}
-
-body.resume-page .pdf-container iframe {
     width: 100%;
-    height: 80vh;           /* height relative to viewport */
-    border: none;           /* remove default border */
+    margin: 0;
+    padding: 0;
 }
 
-/* Adjust for medium screens like tablets */
+/* Make iframe fill the width of its container and take most of the viewport height */
+body.resume-page .pdf-container iframe {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 4rem); /* full viewport height minus some spacing */
+    border: none;
+}
+
+/* Desktop: account for sidebar layout */
+@media (min-width: 1025px) {
+    body.resume-page .pdf-container iframe {
+        height: calc(100vh - 2rem); /* slightly less so it doesn't touch bottom */
+    }
+}
+
+/* Tablet adjustments */
 @media (max-width: 1024px) {
     body.resume-page .pdf-container iframe {
-        height: 70vh;
+        height: calc(100vh - 3rem);
     }
 }
 
-/* Mobile devices */
+/* Mobile adjustments */
 @media (max-width: 768px) {
-    body.resume-page .pdf-container {
-        max-width: 100%;    /* use full width on small screens */
-        margin: 0.5rem auto;
-    }
-
     body.resume-page .pdf-container iframe {
-        height: 60vh;       /* shorter to fit screen better */
+        height: calc(100vh - 6rem); /* leaves room for mobile header/nav */
     }
 }
-
-@media (max-width: 480px) {
-    body.resume-page .pdf-container iframe {
-        height: 50vh;       /* very small screen adjustment */
-    }
-}
-
