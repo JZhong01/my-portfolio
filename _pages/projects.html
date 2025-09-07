@@ -38,7 +38,7 @@ permalink: /projects/
 
 
   <div class="posts">
-
+<!-- 
       {% for post in site.posts %}
         {% if post.categories contains 'regression-analysis' %}
         <div class="post">
@@ -53,7 +53,22 @@ permalink: /projects/
           {{ post.content }}
         </div>
         {% endif %}
+      {% endfor %} -->
+
+      {% for project in site.projects %}
+        {% if project.categories contains 'regression-analysis' %}
+          <div class="post">
+            <h1 class="post-title" style="font-size: 1.60rem; margin-top: 1em; margin-bottom: 1em;">
+              <a href="{{ project.url | relative_url }}" target="_blank">
+                {{ project.title }}
+              </a>
+            </h1>
+            <span class="post-date">{{ project.date | date_to_string }}</span>
+            {{ project.content }}
+          </div>
+        {% endif %}
       {% endfor %}
+
 
   </div>
 
