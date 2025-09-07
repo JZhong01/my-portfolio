@@ -1,43 +1,78 @@
-/* Remove container width restriction ONLY on resume page */
+body.resume-page {
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default .container restriction for this page only */
 body.resume-page .container {
     max-width: none;
     padding-left: 0;
     padding-right: 0;
 }
 
-
-/* Ensure PDF container spans full available width in the content area */
 body.resume-page .pdf-container {
     width: 100%;
-    margin: 0;
+    max-width: 100%;
+    margin: 0 auto;
     padding: 0;
 }
 
-/* Make iframe fill the width of its container and take most of the viewport height */
+/* PDF iframe full width */
 body.resume-page .pdf-container iframe {
-    display: block;
     width: 100%;
-    height: calc(100vh - 4rem); /* full viewport height minus some spacing */
+    height: 80vh;
     border: none;
 }
 
-/* Desktop: account for sidebar layout */
+/* Sidebar-aware layout for desktop */
 @media (min-width: 1025px) {
-    body.resume-page .pdf-container iframe {
-        height: calc(100vh - 2rem); /* slightly less so it doesn't touch bottom */
+    body.resume-page .content {
+        margin-left: 20rem; /* match sidebar width */
+        margin-right: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
 
 /* Tablet adjustments */
 @media (max-width: 1024px) {
+    body.resume-page .content {
+        margin-left: 18rem;
+        margin-right: 1rem;
+    }
+
     body.resume-page .pdf-container iframe {
-        height: calc(100vh - 3rem);
+        height: 70vh;
     }
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
+    body.resume-page .content {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     body.resume-page .pdf-container iframe {
-        height: calc(100vh - 6rem); /* leaves room for mobile header/nav */
+        height: 60vh;
+    }
+}
+
+@media (max-width: 480px) {
+    body.resume-page .content {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    body.resume-page .pdf-container iframe {
+        height: 50vh;
     }
 }
