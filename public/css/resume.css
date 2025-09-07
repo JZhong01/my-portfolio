@@ -1,3 +1,11 @@
+/* Remove container width restriction ONLY on resume page */
+body.resume-page .container {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
 /* Ensure PDF container spans full available width in the content area */
 body.resume-page .pdf-container {
     width: 100%;
