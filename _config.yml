@@ -12,6 +12,10 @@ plugins:
 # Permalinks
 permalink:        pretty
 
+# Include for folder organization 
+include:
+  - _pages
+
 
 # Setup
 title:            Joshua Zhong
