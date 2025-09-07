@@ -1,137 +1,43 @@
-body.resume-page {
-    font-family: "PT Sans", Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0;  /* Light gray or any color of your choice */
+
+
+
+
+
+/* PDF wrapper */
+body.resume-page .pdf-container {
+    width: 100%;            /* full width of content area */
+    max-width: 900px;       /* desktop max width */
+    margin: 1rem auto;      /* center horizontally */
+}
+
+body.resume-page .pdf-container iframe {
     width: 100%;
-    margin: 0;
-    padding: 0;
+    height: 80vh;           /* height relative to viewport */
+    border: none;           /* remove default border */
 }
 
-body.resume-page .resume-header {
-    font-size: 36px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-
-/* Override the content width restriction from hyde.css */
-
-/*.content { */
-    /* max-width: 100%; /* Remove the width restriction */
-    /* margin-left: 380px; /* Adjust according to the width of your sidebar */
-    /* margin-right: 20px; /* Give some padding on the right side */
-    /* padding-top: 2rem; /* Optional: Adjust vertical padding */
-    /* padding-bottom: 2rem;
-}
-*/
-
-
-/* Ensure the body itself has a different background color to differentiate the sidebar */
-body.resume-page .content{
-    background-color: #f0f0f0;  /* Light gray or any color of your choice */
-    max-width: 100%; /* Remove the width restriction */
-    margin-left: 20rem; /* Adjust according to the width of your sidebar */
-    margin-right: 2rem; /* Give some padding on the right side */
-    padding-top: 2rem; /* Optional: Adjust vertical padding */
-    padding-bottom: 2rem;
-    /*display: flex;*/
-}
-
-/* Adjustments for medium-sized screens like tablets */
+/* Adjust for medium screens like tablets */
 @media (max-width: 1024px) {
-    body.resume-page .content {
-        margin-left: 18rem; /* Align with slightly smaller sidebar */
-        margin-right: 1rem;
-    }
-    
-    body.resume-page .resume-header {
-        font-size: 32px;
+    body.resume-page .pdf-container iframe {
+        height: 70vh;
     }
 }
 
-
-/* Responsive adjustments for mobile screens */
+/* Mobile devices */
 @media (max-width: 768px) {
-    body.resume-page .content {
-        margin-left: 0;  /* Remove left margin to maximize screen space */
-        margin-right: 0; /* Remove right margin */
-        padding-left: 1rem;
-        padding-right: 1rem;
+    body.resume-page .pdf-container {
+        max-width: 100%;    /* use full width on small screens */
+        margin: 0.5rem auto;
     }
-    
-    body.resume-page .resume-header {
-        font-size: 28px;
+
+    body.resume-page .pdf-container iframe {
+        height: 60vh;       /* shorter to fit screen better */
     }
 }
-
 
 @media (max-width: 480px) {
-    body.resume-page .content {
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-    
-    body.resume-page .resume-header {
-        font-size: 24px;
+    body.resume-page .pdf-container iframe {
+        height: 50vh;       /* very small screen adjustment */
     }
 }
 
-
-
-/* Specific link styling for resume content */
-body.resume-page .resume-content a {
-    color: #4CAF50;  /* Adjust link color */
-    text-decoration: none;
-}
-
-body.resume-page .resume-content a:hover {
-    text-decoration: underline;
-}
-
-body.resume-page .section {
-    margin-bottom: 10px;
-}
-
-body.resume-page .section h2 {
-    font-size: 24px;
-    font-weight: bold;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-}
-
-body.resume-page h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-body.resume-page p {
-    margin: 5px 0;
-}
-
-body.resume-page ul {
-    margin: 10px 0;
-    padding-left: 20px;
-}
-
-body.resume-page ul li {
-    margin-bottom: 5px;
-}
-
-body.resume-page table.certifications {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-body.resume-page table.certifications td {
-    padding: 5px;
-    border: 1px solid #ddd;
-}
-
-body.resume-page table.certifications td:first-child {
-    font-weight: bold;
-}
