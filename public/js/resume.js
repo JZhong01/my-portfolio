@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
         } 
         else {
             // Desktop
-            pdfFrame.style.width = "100%";
-            pdfFrame.style.height = "80vh"; // Almost full height under sidebar
+            pdfFrame.style.width = "120%";
+            pdfFrame.style.height = "100vh"; // Almost full height under sidebar
         }
     }
 
@@ -33,3 +33,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Run on window resize
     window.addEventListener("resize", resizePDF);
 });
+

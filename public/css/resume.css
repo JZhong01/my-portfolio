@@ -16,15 +16,23 @@ body.resume-page .resume-header {
 }
 
 
-/* Override the content width restriction from hyde.css */
-
-/*.content { */
-    /* max-width: 100%; /* Remove the width restriction */
-    /* margin-left: 380px; /* Adjust according to the width of your sidebar */
-    /* margin-right: 20px; /* Give some padding on the right side */
-    /* padding-top: 2rem; /* Optional: Adjust vertical padding */
-    /* padding-bottom: 2rem;
+body.resume-page .pdf-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
-*/
 
+body.resume-page .pdf-container iframe {
+    display: block;
+    width: 100%;
+    height: 100vh; /* default: viewport height */
+    border: none;
+}
+
+/* Desktop: leave space for sidebar if your theme has one */
+@media (min-width: 1025px) {
+    body.resume-page .pdf-container iframe {
+        height: 120vh; /* allow more space to show more PDF content */
+    }
+}
 
