@@ -37,29 +37,5 @@ body.resume-page .pdf-container iframe {
 }
 
 
-.pdf-container {
-  max-width: 920px;         /* desktop: cap the maximum "page" width so it looks like a sheet */
-  margin: 0 auto;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-
-/* Make the embedded object behave like a paper sheet */
-.pdf-container object {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1.414;  /* width : height = A4 (approx) */
-  max-height: 100vh;        /* never exceed viewport height */
-  border: none;
-  background: white;        /* makes it read like a sheet */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-/* On very small phones, add inner padding so the page isn't flush edge-to-edge */
-@media (max-width: 480px) {
-  .pdf-container { padding: 0.5rem; }
-  .pdf-container object { width: calc(100% - 1rem); } /* leave a little margin */
-}
-
 
 
