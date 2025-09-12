@@ -36,3 +36,12 @@ body.resume-page .pdf-container iframe {
     }
 }
 
+
+
+.pdf-container object {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.414; /* A4 portrait ratio (width : height) */
+  max-height: 100vh;       /* don’t exceed viewport height */
+  border: none;
+}
