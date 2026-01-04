@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="notebook-page">
+  <h1>{{ page.title }}</h1>
+  <p>{{ page.date | date: "%B %d, %Y" }}</p>
+  {{ content }}
+</article>
+<style>
+.notebook-container { width: 100%; margin: 2rem 0; }
+.notebook-container iframe { width: 100%; height: 800px; border: 1px solid #ddd; }
+</style>
