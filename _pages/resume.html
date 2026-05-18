@@ -4,15 +4,255 @@ title: Resume
 permalink: /resume/
 ---
 
-<div class="pdf-container">
-  <object data="{{ site.baseurl }}/assets/Zhong,Joshua.pdf#zoom=page-width" 
-          type="application/pdf" 
-          width="100%" 
+<style>
+  /* Desktop: show PDF, hide HTML */
+  .pdf-resume  { display: block; }
+  .html-resume { display: none; }
+
+  /* Mobile: hide PDF, show HTML */
+  @media (max-width: 768px) {
+    .pdf-resume  { display: none; }
+    .html-resume { display: block; }
+  }
+
+  /* HTML resume base */
+  .html-resume {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 11pt;
+    color: #000;
+    line-height: 1.4;
+  }
+
+  .resume-header {
+    text-align: center;
+    margin-bottom: 0.6em;
+  }
+
+  .resume-header h1 {
+    font-size: 1.35em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 0.25em 0;
+    letter-spacing: 0.04em;
+  }
+
+  .resume-contact {
+    font-size: 0.9em;
+  }
+
+  .resume-contact a {
+    color: #0645ad;
+  }
+
+  .resume-section {
+    margin-top: 0.75em;
+  }
+
+  .resume-section h2 {
+    text-align: center;
+    font-size: 0.95em;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+    margin: 0 0 0.4em 0;
+  }
+
+  .resume-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.2em;
+  }
+
+  .resume-right {
+    white-space: nowrap;
+    font-size: 0.9em;
+  }
+
+  .html-resume ul {
+    margin: 0.2em 0 0.35em 0;
+    padding-left: 1.3em;
+  }
+
+  .html-resume li {
+    font-size: 0.9em;
+    margin-bottom: 0.2em;
+    line-height: 1.4;
+  }
+
+  .html-resume a {
+    color: #0645ad;
+  }
+
+  .resume-entry {
+    margin-top: 0.35em;
+  }
+
+  .resume-center {
+    text-align: center;
+    margin-top: 0.6em;
+    font-size: 0.9em;
+  }
+</style>
+
+<!-- Desktop: PDF embed -->
+<div class="pdf-resume">
+  <object data="{{ site.baseurl }}/assets/Zhong,Joshua.pdf#zoom=page-width"
+          type="application/pdf"
+          width="100%"
           height="800px">
     <p>
-      It appears you don't have a PDF plugin for this browser.  
-      No biggie… you can 
-      <a href="{{ site.baseurl }}/assets/Zhong,Joshua.pdf">click here to download the PDF file.</a>
+      It appears you don't have a PDF plugin for this browser.
+      <a href="{{ site.baseurl }}/assets/Zhong,Joshua.pdf">Click here to download the PDF.</a>
     </p>
   </object>
+</div>
+
+<!-- Mobile: HTML resume -->
+<div class="html-resume">
+
+  <div class="resume-header">
+    <h1>Joshua (Josh) Zhong</h1>
+    <div class="resume-contact">
+      <a href="mailto:jyz2029@nyu.edu">jyz2029@nyu.edu</a> &nbsp;|&nbsp;
+      (484) 965-0953 &nbsp;|&nbsp;
+      <a href="https://www.linkedin.com/in/jy-z/" target="_blank">linkedin.com/in/jy-z</a> &nbsp;|&nbsp;
+      <a href="https://jzhong01.github.io/my-portfolio/" target="_blank">jzhong01.github.io/my-portfolio/</a>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="resume-section">
+    <h2>Education</h2>
+
+    <div class="resume-row">
+      <strong>New York University, Tandon School of Engineering</strong>
+      <span class="resume-right">Brooklyn, NY</span>
+    </div>
+    <div class="resume-row">
+      <span>Master of Science in Financial Engineering</span>
+      <span class="resume-right">Expected 05/27</span>
+    </div>
+    <div><em>GPA: 3.889/4.0</em></div>
+
+    <div class="resume-entry">
+      <div class="resume-row">
+        <strong>West Chester University of Pennsylvania</strong>
+        <span class="resume-right">West Chester, PA</span>
+      </div>
+      <div class="resume-row">
+        <span>Bachelor of Science in Mathematics &mdash; Statistics concentration</span>
+        <span class="resume-right">08/24</span>
+      </div>
+      <div><em>GPA: 4.0/4.0</em>; Summa Cum Laude; Dean's List (All semesters)</div>
+    </div>
+  </div>
+
+  <!-- PROGRAMMING / TECHNICAL SKILLS -->
+  <div class="resume-section">
+    <h2>Programming / Technical Skills</h2>
+    <ul>
+      <li><strong>Programming Languages</strong>: Python (QuantLib, Sci-kit learn), C++, SQL, R (Tidyverse, ggplot2), Excel, Java</li>
+      <li><strong>Statistical &amp; Quantitative Methods</strong>: Regression Modeling, Time Series Analysis, Monte Carlo, Backtesting, Hypothesis Testing, Principal Component Analysis (PCA), Clustering</li>
+    </ul>
+  </div>
+
+  <!-- COURSEWORK HIGHLIGHTS -->
+  <div class="resume-section">
+    <h2>Coursework Highlights</h2>
+    <ul>
+      <li><strong>Mathematics &amp; Statistics</strong>: Stochastic Calculus, Mathematical Statistics, Topics in Advanced Statistics, Differential Equations, Time Series &amp; Experimental Design</li>
+      <li><strong>Programming</strong>: Machine Learning in Financial Engineering, Financial Computing, C++ Programming for Financial Engineering</li>
+      <li><strong>Finance &amp; Economics</strong>: Options Pricing, Intro to Derivative Securities, Quantitative Methods in Finance</li>
+    </ul>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <div class="resume-section">
+    <h2>Experience</h2>
+
+    <div class="resume-row">
+      <span><strong>Views Digital Marketing</strong>, Norristown, PA</span>
+      <span class="resume-right">12/23 &ndash; 05/25</span>
+    </div>
+    <div><em>Data Analyst, AI Model Development</em></div>
+    <ul>
+      <li>Developed and fine-tuned large language models for structured data analysis, implementing prompt engineering to create custom pipelines leading to a 5% increase in conversion rate from leads</li>
+      <li>Devised and executed A/B testing frameworks to statistically assess model-driven outcomes and guide iterative refinement</li>
+    </ul>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="resume-section">
+    <h2>Projects</h2>
+
+    <div><strong>New York University</strong>, Brooklyn, NY</div>
+
+    <div class="resume-entry">
+      <div class="resume-row">
+        <em>Cross-Currency Basis Dynamics in Stablecoin Markets &mdash; IAQF Competition Winner</em>
+        <span class="resume-right">01/26 &ndash; 03/26</span>
+      </div>
+      <ul>
+        <li>Constructed a cross-currency basis framework using minute-level order book snapshots across Kraken, Binance, and Coinbase, documenting a 1,452 bps peak USDC dislocation and a persistent &minus;25.8 bps USDT safe-haven premium; validated cross-venue with pairwise correlation of 0.94</li>
+        <li>Modeled arbitrage persistence via AR(1) estimation and ADF unit-root testing, showing USDC basis half-life expanded from 3.7 minutes to 12+ hours during stress, consistent with a limits-of-arbitrage breakdown</li>
+        <li>Decomposed order book microstructure across three crisis snapshots, revealing one-sided bid depth accumulation in BTC/USDC distinct from balanced BTC/USDT books; identified Bitcoin's role as an escape vehicle from USDC to USDT</li>
+      </ul>
+    </div>
+
+    <div class="resume-entry">
+      <div class="resume-row">
+        <em>Case Study: Predicting Palladium Futures Prices</em>
+        <span class="resume-right">09/25 &ndash; 12/25</span>
+      </div>
+      <ul>
+        <li>Built 5 learning models (XGBoost, Random Forest, BiLSTM, LSTM-Attention, ARIMAX) for palladium futures forecasting using 22 engineered features; achieved 45% RMSE improvement over literature benchmarks</li>
+        <li>Conducted regime-based robustness analysis across Pre-COVID, COVID-19, and Russia-Ukraine periods; identified model degradation patterns (2&ndash;12&times; RMSE increase) during structural market breaks</li>
+      </ul>
+    </div>
+
+    <div class="resume-entry">
+      <div><strong>West Chester University</strong>, West Chester, PA</div>
+      <div class="resume-row">
+        <em>Modeling California Housing Markets using Multiple Linear Regression</em>
+        <span class="resume-right">12/23</span>
+      </div>
+      <ul>
+        <li>Engineered advanced geospatial features by replacing raw coordinates with K-means clusters and distance-to-coast/city metrics, increasing predictive accuracy and interpretability of regression outputs</li>
+        <li>Applied Box-Cox transformation and bootstrap resampling to correct heteroscedasticity and produce stable coefficient estimates with reliable confidence intervals</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- LEADERSHIP / HONORS -->
+  <div class="resume-section">
+    <h2>Leadership / Honors</h2>
+    <ul>
+      <li>
+        <div class="resume-row">
+          <span><strong>FRE Department Club (Bulls &amp; Bears)</strong>, <em>President</em></span>
+          <span class="resume-right">10/25 &ndash; Present</span>
+        </div>
+        Spearheading department's first paper trading fund, and organizing professional development events for 100+ member quant club
+      </li>
+      <li>
+        <div class="resume-row">
+          <span><strong>WCU American Statistical Association</strong>, <em>President</em></span>
+          <span class="resume-right">08/23 &ndash; 05/24</span>
+        </div>
+      </li>
+      <li>
+        <div class="resume-row">
+          <span>IAQF Academic Affiliate Member Paper Competition, <em>Award Winner</em></span>
+          <span class="resume-right">05/26</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="resume-center">U.S. Citizen</div>
+
 </div>

@@ -1,0 +1,126 @@
+\documentclass[10pt, letterpaper]{article}
+
+% ---- Packages ----
+\usepackage[margin=0.45in, top=0.4in, bottom=0.4in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{mathptmx}
+
+% ---- General formatting ----
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
+
+% ---- Section formatting: centered, all caps, not bold, with rule ----
+\titleformat{\section}{\large\centering}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{5pt}{5pt}
+
+% ---- List formatting ----
+\setlist[itemize]{nosep, left=0pt, labelsep=18pt, itemsep=2pt, topsep=2pt, parsep=0pt}
+
+\begin{document}
+
+% ==== HEADER ====
+\begin{center}
+  \textbf{{\Large JOSHUA (JOSH) ZHONG}} \\[5pt]
+  {\large \href{mailto:jyz2029@nyu.edu}{jyz2029@nyu.edu} \hspace{2pt}\textbar\hspace{2pt} (484) 965-0953 \hspace{2pt}\textbar\hspace{2pt} \href{https://www.linkedin.com/in/jy-z/}{linkedin.com/in/jy-z} \hspace{2pt}\textbar\hspace{2pt}\href{https://jzhong01.github.io/my-portfolio/}{jzhong01.github.io/my-portfolio/}}
+\end{center}
+
+\vspace{-2pt}
+
+% ==== EDUCATION ====
+\section{EDUCATION}
+
+\textbf{NEW YORK UNIVERSITY, TANDON SCHOOL OF ENGINEERING} \hfill Brooklyn, NY \\
+Master of Science in Financial Engineering \hfill Expected 05/27 \\
+\textit{GPA: 3.889/4.0}
+
+\vspace{3pt}
+
+\textbf{WEST CHESTER UNIVERSITY OF PENNSYLVANIA} \hfill West Chester, PA \\
+Bachelor of Science in Mathematics -- Statistics concentration \hfill 08/24 \\
+\textit{GPA: 4.0/4.0}; Summa Cum Laude; Dean's List (All semesters)
+
+% ==== PROGRAMMING / TECHNICAL SKILLS ====
+\section{PROGRAMMING / TECHNICAL SKILLS}
+
+\begin{itemize}
+  \item \textbf{Programming Languages}: Python (QuantLib, Sci-kit learn), C++, SQL, R (Tidyverse, ggplot2), Excel, Java
+  \item \textbf{Statistical \& Quantitative Methods}: Regression Modeling, Time Series Analysis, Monte Carlo, Backtesting, Hypothesis Testing, Principal Component Analysis (PCA), Clustering
+\end{itemize}
+
+% ==== COURSEWORK HIGHLIGHTS ====
+\section{COURSEWORK HIGHLIGHTS}
+
+\begin{itemize}
+  \item \textbf{Mathematics \& Statistics}: Stochastic Calculus, Mathematical Statistics, Topics in Advanced Statistics, Differential Equations, Time Series \& Experimental Design 
+  \item \textbf{Programming}: Machine Learning in Financial Engineering, Financial Computing, C++ Programming for Financial Engineering
+  \item \textbf{Finance \& Economics}: Options Pricing, Intro to Derivative Securities, Quantitative Methods in Finance
+\end{itemize}
+
+% ==== EXPERIENCE ====
+\section{EXPERIENCE}
+
+\textbf{VIEWS DIGITAL MARKETING}, Norristown, PA \hfill 12/23 -- 05/25 \\
+\textit{Data Analyst, AI Model Development}
+\begin{itemize}
+  \item Developed and fine-tuned large language models for structured data analysis, implementing prompt engineering to create custom pipelines leading to a 5\% increase in conversion rate from leads
+  \item Devised and executed A/B testing frameworks to statistically assess model-driven outcomes and guide iterative refinement
+\end{itemize}
+
+% ==== PROJECTS ====
+\section{PROJECTS}
+
+
+
+
+% \vspace{1pt}
+
+\textbf{NEW YORK UNIVERSITY}, Brooklyn, NY \\[1pt]
+\textit{Cross-Currency Basis Dynamics in Stablecoin Markets -- IAQF Competition Winner} \hfill 01/26 -- 03/26
+\begin{itemize}
+  \item Constructed a cross-currency basis framework using minute-level order book snapshots across Kraken, Binance, and Coinbase, documenting a 1,452 bps peak USDC dislocation and a persistent -25.8 bps USDT safe-haven premium bounded by maker/taker fee thresholds; validated cross-venue with pairwise correlation of 0.94
+  \item Modeled arbitrage persistence via AR(1) estimation and ADF unit-root testing, showing USDC basis half-life expanded from 3.7 minutes to 12+ hours during stress consistent with a limits-of-arbitrage breakdown 
+  % where adverse selection risk and one-directional flow disabled parity enforcement
+  \item Decomposed order book microstructure across three crisis snapshots, revealing one-sided bid depth accumulation in BTC/USDC distinct from balanced BTC/USDT books. Identified Bitcoin's role as an escape vehicle from USDC to USDT 
+\end{itemize}
+
+\textit{Case Study: Predicting Palladium Futures Prices} \hfill 09/25 -- 12/25
+\begin{itemize}
+  \item Built 5 learning models (XGBoost, Random Forest, BiLSTM, LSTM-Attention, ARIMAX) for palladium futures forecasting using 22 engineered features; achieved 45\% RMSE improvement over literature benchmarks
+  \item Conducted regime-based robustness analysis across Pre-COVID, COVID-19, and Russia-Ukraine periods; identified model degradation patterns (2--12$\times$ RMSE increase) during structural market breaks
+\end{itemize}
+
+
+
+\vspace{3pt}
+
+\textbf{WEST CHESTER UNIVERSITY}, West Chester, PA \\[1pt]
+\textit{Modeling California Housing Markets using Multiple Linear Regression} \hfill 12/23
+\begin{itemize}
+  \item Engineered advanced geospatial features by replacing raw coordinates with K-means clusters and distance-to-coast/city metrics, increasing predictive accuracy and interpretability of regression outputs
+  \item Applied Box-Cox transformation and bootstrap resampling to correct heteroscedasticity and produce stable coefficient estimates with reliable confidence intervals
+\end{itemize}
+
+\vspace{-5pt}
+% ==== LEADERSHIP / HONORS ====
+\section{LEADERSHIP / HONORS}
+
+\begin{itemize}
+  \item \textbf{FRE Department Club (Bulls \& Bears)}, \textit{President} \hfill 10/25 -- Present \\
+    Spearheading department's first paper trading fund, and organizing professional development events for 100+ member quant club
+  \item \textbf{WCU American Statistical Association}, \textit{President} \hfill 08/23 -- 05/24
+  \item IAQF Academic Affiliate Member Paper Competition, \textit{Award Winner} \hfill 05/26
+
+
+\end{itemize}
+
+\vspace{2pt}
+\begin{center}
+  U.S. Citizen
+\end{center}
+
+\end{document}
